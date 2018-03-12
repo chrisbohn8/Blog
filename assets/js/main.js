@@ -182,7 +182,7 @@
 							$navContent.appendTo($nav);
 
 						// Flip icon classes.
-							$nav.find('.icons, .icon')
+							$nav.find('.icons, .icon, .fab')
 								.removeClass('alt');
 
 					});
@@ -193,7 +193,7 @@
 						$navContent.appendTo($navPanelInner);
 
 						// Flip icon classes.
-							$navPanelInner.find('.icons, .icon')
+							$navPanelInner.find('.icons, .icon, .fab')
 								.addClass('alt');
 
 					});

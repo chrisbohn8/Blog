@@ -2391,7 +2391,8 @@
 
 /* Icon */
 
-	.icon {
+	.icon, 
+	.fab {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
@@ -2407,6 +2408,10 @@
 		}
 
 		.icon > .label {
+			display: none;
+		}
+
+		.fab > .label {
 			display: none;
 		}
 
@@ -2563,7 +2568,25 @@
 					font-size: 1.25rem;
 				}
 
+				ul.icons li .fab:before {
+					width: 2.25rem;
+					height: 2.25rem;
+					line-height: 2.25rem;
+					display: inline-block;
+					text-align: center;
+					border-radius: 100%;
+				}
+
+
 			ul.icons.alt li .icon:before {
+				-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+				font-size: 1rem;
+			}
+			
+			ul.icons.alt li .fab:before {
 				-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 				-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 				-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -2696,11 +2719,23 @@
 		color: #18bfef;
 	}
 
-	ul.icons.alt li .icon:before {
+	ul.icons li a.fab:hover:before {
+		color: #18bfef;
+	}
+
+	ul.icons.alt li  .icon:before {
+		box-shadow: inset 0 0 0 2px #eeeeee;
+	}
+
+	ul.icons.alt li  .fab:before {
 		box-shadow: inset 0 0 0 2px #eeeeee;
 	}
 
 	ul.icons.alt li a.icon:hover:before {
+		box-shadow: inset 0 0 0 2px #18bfef;
+	}
+
+	ul.icons.alt li a.fab:hover:before {
 		box-shadow: inset 0 0 0 2px #18bfef;
 	}
 
@@ -3441,8 +3476,20 @@
 			color: #18bfef;
 		}
 
+		#nav ul.icons li a.fab:hover:before {
+			color: #18bfef;
+		}
+
 		#nav ul.icons.alt li .icon:before {
 			box-shadow: inset 0 0 0 2px #ffffff;
+		}
+
+		#nav ul.icons.alt li .fab:before {
+			box-shadow: inset 0 0 0 2px #ffffff;
+		}
+
+		#nav ul.icons.alt li a.fab:hover:before {
+			box-shadow: inset 0 0 0 2px #18bfef;
 		}
 
 		#nav ul.icons.alt li a.icon:hover:before {
@@ -3928,7 +3975,15 @@
 			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
+		#footer ul.icons.alt li .fab:before {
+			box-shadow: inset 0 0 0 2px #e2e2e2;
+		}
+
 		#footer ul.icons.alt li a.icon:hover:before {
+			box-shadow: inset 0 0 0 2px #18bfef;
+		}
+
+		#footer ul.icons.alt li a.fab:hover:before {
 			box-shadow: inset 0 0 0 2px #18bfef;
 		}
 

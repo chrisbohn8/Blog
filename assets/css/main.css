@@ -2465,7 +2465,7 @@
 			}
 
 		.image.main {
-			display: block;
+			display: inline-block;
 			margin: 4rem 0;
 			width: 100%;
 		}
@@ -3805,6 +3805,30 @@
 			}
 
 		}
+
+/* Container */
+#primaryImage{
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+
+	#primaryImage{
+		display: block;
+	}
+
+	#secondaryImage{
+		display: none;
+	}
+	.container {
+	  display: flex; /* or inline-flex */
+	}
+
+	.container > .main {
+		width: 50%;
+		margin: 0 1rem 1rem;
+	}
+}
 
 /* Footer */
 

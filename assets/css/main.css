@@ -7,7 +7,22 @@
          url('../fonts/bethellen-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+	font-family: 'Luna';
+	src: url('../fonts/luna-webfont.woff') format('woff'),
+		url('../fonts/luna-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Amatic';
+	src: url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
+		url('../fonts/amaticsc-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* Reset */
@@ -34,7 +49,8 @@
 	}
 
 	blockquote, q {
-		quotes: none;
+		quotes: initial;
+		justify-content: center;
 	}
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -1837,7 +1853,10 @@
 	}
 
 	blockquote {
-		border-left-color: #eeeeee;
+/*		border-left-color: #eeeeee;
+*/		font-size: 30pt;
+		font-family: Amatic;
+		font-weight: 500;
 	}
 
 	code {

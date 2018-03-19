@@ -2507,6 +2507,10 @@
 				/*margin: 2rem 0;*/
 			}
 
+			blockquote {
+				line-height: 2.5rem;
+			}
+
 		}
 
 	a.image {

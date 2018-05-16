@@ -1,3 +1,8 @@
+/*
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
 (function($) {
 
@@ -177,7 +182,7 @@
 							$navContent.appendTo($nav);
 
 						// Flip icon classes.
-							$nav.find('.icons, .icon, .fab')
+							$nav.find('.icons, .icon')
 								.removeClass('alt');
 
 					});
@@ -188,7 +193,7 @@
 						$navContent.appendTo($navPanelInner);
 
 						// Flip icon classes.
-							$navPanelInner.find('.icons, .icon, .fab')
+							$navPanelInner.find('.icons, .icon')
 								.addClass('alt');
 
 					});

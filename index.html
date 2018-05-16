@@ -1,12 +1,18 @@
+---
+layout: null
+title: Home | Bailey's Book Club
+description: A blog for book reviews and musings by Bailey Beck.
+sitemap:
+    priority: 1.0
+    lastmod: 2017-11-02
+    changefreq: weekly
+---
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Home | Bailey's Book Club</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    {% include head.html %}
+
+
 	</head>
 	<body class="is-loading">
 
@@ -15,8 +21,8 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Bailey's Book Club</h1>
-						<p>A place for book reviews &amp; musings</p>
+            <h1>{{site.title}}</h1>
+						<p>A place for book reviews &amp; musings.</p.>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -24,232 +30,81 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Bailey's Book Club</a>
+						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="posts.html">Posts</a></li>
-						</ul>
+
+            {% include nav.html %}
+
 						<ul class="icons">
-							<li><a href="https://www.instagram.com/chickennnnuggets/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.goodreads.com/orange-juice" target="_blank" class="fab fa-goodreads-g"><span class="label">Goodreads</span></a></li>
-							<li><a href="mailto:bailey@website.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+           		<li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+				<li><a href="https://goodreads.com/{{site.goodreads}}" class="fab fa-goodreads-g" rel="nofollow"><span class="label">Good Reads</span></a></li>
+				<li><a href="mailto:bailey@website.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">April 23, 2018</span>
-									<h2><a href="a-list-of-cages.html">A List of Cages</a></h2>
-								
-								</header>
-								<div class="container">
-									<div class="subcontainer">
-									<p>A List of Cages is a heart-wrenching story told from the perspective of two boys-- Julian, who is abused by his uncle, and Adam, who used to be Julian’s foster brother. Adam and Julian reconnect when Adam becomes aide to the school therapist, who Julian artfully evades until offered the prospect of friendship with Adam who comes to fetch him for his appointments.</p>
-									<ul class="actions">
-										<li><a href="a-list-of-cages.html" id="largeScreenButton" class="button big">Full Post</a></li>
-									</ul>
-									</div>
-									<a href="a-list-of-cages.html" class="image main"><img id="primaryImage" src="images/a-list-of-cages.png" alt="A List of Cages Book Cover" /><img id="secondaryImage" src="images/a-list-of-cages-wide.png" alt="A List of Cages Book Cover" /></a>
-								<ul class="actions">
-									<li><a href="a-list-of-cages.html" id="smallScreenButton" class="button big">Full Post</a></li>
-								</ul>
-								</div>
-							</article>
+						<section class="post featured">
+                {% for post in site.posts limit:1 %}
+                {% assign mod3 = forloop.index | modulo: 3 %}
+  								<article>
+  									<header>
+  										<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+  										<h1><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h1>
+  									</header>
+   									<a href="{{ post.url | absolute_url }}" class="image right"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+  								<!--	<p>{{ post.excerpt }}</p>-->
+									<blockquote class="align-left"> Dear friend,<br> There is a lot to tell you about the last two weeks. A lot of it is good, but a lot of it is bad. Again, I don’t know why this always happens. </blockquote>
+  									<a href="{{ post.url | absolute_url }}" class="image fit wide"><img src="{{ post.image-wide | absolute_url }}" alt="" /></a>
+  									<ul class="actions">
+  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Post</a></li>
+  									</ul>
+  								</article>
+                {% endfor %}
 
+							</section>
 
-						<!-- Post -->
-<section class="posts">
-	<article> 
-		<header> 
-			<span class="date">March 19, 2018</span>
-			<h2><a href="Simon-vs.-the-Homo-Sapiens-Agenda-review.html">Simon vs. the Homo Sapiens Agenda</a></h2>
-		</header>
-
-		<a href="Simon-vs.-the-Homo-Sapiens-Agenda-review.html"><img id="primaryImage" class="image fit" src="images/simon-vs-the-homo-sapien-agenda-wide.jpg" alt="Simon vs. the Homo Sapiens Agenda Book Cover" /></a>
-
-		<p>Simon is a closeted, gay high schooler who feels alone in this plight until reading a post on his school’s gossip blog from a mystery guy that he totally relates to. Simon connects with the mystery boy called Blue. Their budding email relationship is eventually discovered by Marty, a desperate classmate. Marty blackmails Simon in order to get closer to Simon’s friend Abby.</p>
-		<ul class="actions">
-			<li><a href="Simon-vs.-the-Homo-Sapiens-Agenda-review.html" id="largeScreenButton" class="button big">Full Post</a></li>
-		</ul>
-		<img id="secondaryImage" class="image fit" src="images/simon-vs-the-homo-sapien-agenda-wide.jpg" alt="Simon vs. the Homo Sapiens Agenda Book Cover" /></a>
-		<ul class="actions">
-			<li><a href="Simon-vs.-the-Homo-Sapiens-Agenda-review.html" id="smallScreenButton" class="button big">Full Post</a></li>
-		</ul>
-	</article>
-
-	<article>
-		<header> 
-			<span class="date">March 12, 2018</span>
-			<h2><a href="the-woman-in-the-window-review.html">The Woman in the Window</a></h2>
-		</header>
-	<img id="primaryImage" class="image fit" src="images/the_woman_in_the_window.png" alt="The Woman in the Window Book Cover" />
-		<p>Anna is an agoraphobe who surveys the monotonous lives of her neighbors from her window but then witnesses a violent crime. Anna’s agoraphobia isn’t the only obstacle stopping her from solving the crime-- she’s on several medications and combines those with copious amounts of wine which causes law enforcement to brush her off as delusional.</p>
-		<ul class="actions">
-			<li><a href="the-woman-in-the-window-review.html" id="largeScreenButton" class="button big">Full Post</a></li>
-		</ul>
-		<a href="the-woman-in-the-window-review.html"><img id="secondaryImage" class="image fit" src="images/the_woman_in_the_window.png" alt="The Woman in the Window Book Cover" /></a>
-		<ul class="actions">
-									<li><a href="the-woman-in-the-window-review.html" id="smallScreenButton" class="button big">Full Post</a></li>
-								</ul>
-								</div>
-							</article>
-						</section>
 						<!-- Posts -->
-<!-- 							<section class="posts">
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">The Hate U <br />give</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">I Am Watching You</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">One of Us is Lying</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">The Alice Network</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">The Lovely Bones</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 11, 2018</span>
-										<h2><a href="#">The Woman in the Window</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>A brief descriptive paragraph will go here.</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Full Review</a></li>
-									</ul>
-								</article>
-							</section> -->
+							<section class="posts">
+                {% for post in site.posts limit:2 offset:1 %}
+                {% assign mod3 = forloop.index | modulo: 3 %}
+  								<article>
+  									<header>
+  										<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+  									</header>
+  									<a href="{{ post.url | absolute_url }}" class="image fit max-width-40"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+  									<p>{{ post.excerpt }}</p>
+  									<ul class="actions">
+  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Post</a></li>
+  									</ul>
+  								</article>
+               {% endfor %}
+
+							</section>
 
 						<!-- Footer -->
-<!--  							<footer>
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>  -->
+							<footer>
+                <ul class="actions">
+                  <li><a href="{{ "/blog/" | absolute_url }}" class="button special big">More Post</a></li>
+                </ul>
+							</footer>
 
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-<!-- 						<section>
-							<form method="post" action="#">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="3"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section> -->
-						<section class="split contact">
-							<section id="contact" class="alt">
-<!-- 								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Contact</h3> -->
-								<ul class="icons alt">
-									<li><a href="https://www.instagram.com/chickennnnuggets/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.goodreads.com/orange-juice" target="_blank" class="fab fa-goodreads-g"><span class="label">Goodreads</span></a></li>
-									<li><a href="mailto:bailey@website.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Bailey's Book Club</li><li>Design: <a href="https://github.com/chrisbohn8">Chris Bohn</a></li></ul>
-					</div>
+        {% include foot.html %}
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		{% include scripts-main.html %}
+    {% include tracking.html %}
 
 	</body>
 </html>

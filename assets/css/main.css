@@ -1,30 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
-@font-face {
-    font-family: 'bethEllen';
-    src: url('../fonts/bethellen-webfont.woff2') format('woff2'),
-         url('../fonts/bethellen-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'Luna';
-	src: url('../fonts/luna-webfont.woff') format('woff'),
-		url('../fonts/luna-webfont.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Amatic';
-	src: url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
-		url('../fonts/amaticsc-regular-webfont.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -49,8 +25,11 @@
 	}
 
 	blockquote, q {
-		quotes: initial;
-		justify-content: center;
+		quotes: none;
+	}
+
+	blockquote.small-text {
+		font-size: 1.4rem;
 	}
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -1780,6 +1759,8 @@
 	}
 
 	blockquote {
+		font-size: 2.25rem;
+		font-family: Amatic;
 		border-left: solid 4px;
 		font-style: italic;
 		margin: 0 0 2rem 0;
@@ -1853,10 +1834,7 @@
 	}
 
 	blockquote {
-/*		border-left-color: #eeeeee;
-*/		font-size: 30pt;
-		font-family: Amatic;
-		font-weight: 500;
+		border-left-color: #eeeeee;
 	}
 
 	code {
@@ -2205,6 +2183,7 @@
 		padding: 0 1rem;
 		text-decoration: none;
 		width: 100%;
+		resize: vertical;
 	}
 
 		input[type="text"]:invalid,
@@ -2413,8 +2392,7 @@
 
 /* Icon */
 
-	.icon, 
-	.fab {
+	.icon, .fab {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
@@ -2432,7 +2410,6 @@
 		.icon > .label {
 			display: none;
 		}
-
 		.fab > .label {
 			display: none;
 		}
@@ -2444,17 +2421,20 @@
 		display: inline-block;
 		position: relative;
 	}
-
 		.image img {
 			display: block;
 		}
+		.image.wide img {
+			display: none;
+		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 30%;
 		}
 
 			.image.left img, .image.right img {
 				width: 100%;
+				height: 100%;
 			}
 
 		.image.left {
@@ -2484,8 +2464,8 @@
 			}
 
 		.image.main {
-			display: inline-block;
-			/*margin: 4rem 0;*/
+			display: block;
+			margin: 4rem 0;
 			width: 100%;
 		}
 
@@ -2497,6 +2477,10 @@
 				width: 100%;
 			}
 
+		.max-width-40 img {
+				max-width: 60%;
+				margin: auto;
+			}
 		@media screen and (max-width: 736px) {
 
 			.image.fit {
@@ -2504,13 +2488,14 @@
 			}
 
 			.image.main {
-				/*margin: 2rem 0;*/
+				margin: 2rem 0;
 			}
-
-			blockquote {
-				line-height: 2.5rem;
+			.image.left, .image.right {
+				display: none;
 			}
-
+			.image.wide img {
+				display: inline-block;
+			}
 		}
 
 	a.image {
@@ -2545,7 +2530,7 @@
 
 	ul {
 		list-style: disc;
-		/*margin: 0 0 2rem 0;*/
+		margin: 0 0 2rem 0;
 		padding-left: 1rem;
 	}
 
@@ -2568,10 +2553,12 @@
 					padding-top: 0;
 				}
 
-		ul.icons {
+		ul.icons, ul.fab {
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			display: flex;
+			justify-content: center;
 		}
 
 			ul.icons li {
@@ -2601,8 +2588,8 @@
 					display: inline-block;
 					text-align: center;
 					border-radius: 100%;
+					font-size: 1.25rem;
 				}
-
 
 			ul.icons.alt li .icon:before {
 				-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -2611,7 +2598,7 @@
 				transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 				font-size: 1rem;
 			}
-			
+
 			ul.icons.alt li .fab:before {
 				-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 				-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -2690,7 +2677,7 @@
 			@media screen and (max-width: 480px) {
 
 				ul.actions {
-					/*margin: 0 0 2rem 0;*/
+					margin: 0 0 2rem 0;
 				}
 
 					ul.actions li {
@@ -2710,6 +2697,10 @@
 						}
 
 							ul.actions li > *.icon:before {
+								margin-left: -2rem;
+							}
+
+							ul.actions li > *.fab:before {
 								margin-left: -2rem;
 							}
 
@@ -2745,20 +2736,20 @@
 		color: #18bfef;
 	}
 
-	ul.icons li a.fab:hover:before {
-		color: #18bfef;
-	}
-
-	ul.icons.alt li  .icon:before {
-		box-shadow: inset 0 0 0 2px #eeeeee;
-	}
-
-	ul.icons.alt li  .fab:before {
+	ul.icons.alt li .icon:before {
 		box-shadow: inset 0 0 0 2px #eeeeee;
 	}
 
 	ul.icons.alt li a.icon:hover:before {
 		box-shadow: inset 0 0 0 2px #18bfef;
+	}
+
+	ul.icons li a.fab:hover:before {
+		color: #18bfef;
+	}
+
+	ul.icons.alt li .fab:before {
+		box-shadow: inset 0 0 0 2px #eeeeee;
 	}
 
 	ul.icons.alt li a.fab:hover:before {
@@ -3191,9 +3182,6 @@
 
 		#intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
 			color: #ffffff;
-			font-family: "Source Sans Pro";
-			text-transform: capitalize;
-			font-weight: normal;
 		}
 
 		#intro blockquote {
@@ -3295,8 +3283,6 @@
 				transform: translateY(0);
 				opacity: 1;
 				visibility: visible;
-				font-family: "Source Sans Pro";
-				text-transform: capitalize;
 			}
 
 		body.is-loading #intro {
@@ -3444,7 +3430,7 @@
 			letter-spacing: 0.075em;
 			line-height: 1;
 			padding: 1rem 1.75rem;
-			text-transform: capitalize;
+			text-transform: uppercase;
 			visibility: visible;
 		}
 
@@ -3507,12 +3493,16 @@
 			color: #18bfef;
 		}
 
-		#nav ul.icons li a.fab:hover:before {
-			color: #18bfef;
-		}
-
 		#nav ul.icons.alt li .icon:before {
 			box-shadow: inset 0 0 0 2px #ffffff;
+		}
+
+		#nav ul.icons.alt li a.icon:hover:before {
+			box-shadow: inset 0 0 0 2px #18bfef;
+		}
+
+		#nav ul.icons li a.fab:hover:before {
+			color: #18bfef;
 		}
 
 		#nav ul.icons.alt li .fab:before {
@@ -3520,10 +3510,6 @@
 		}
 
 		#nav ul.icons.alt li a.fab:hover:before {
-			box-shadow: inset 0 0 0 2px #18bfef;
-		}
-
-		#nav ul.icons.alt li a.icon:hover:before {
 			box-shadow: inset 0 0 0 2px #18bfef;
 		}
 
@@ -3829,61 +3815,6 @@
 
 		}
 
-/* Container */
-#primaryImage, #imgFloatRight{
-	display: none;
-}
-
-
-@media screen and (min-width: 700px) {
-
-	#primaryImage{
-		display: block;
-	}
-
-	#secondaryImage{
-		display: none;
-	}
-	.container {
-	  display: flex; /* or inline-flex */
-	}
-
-	.container > .main {
-		width: 75%;
-		margin: 0 1rem 1rem;
-	}
-
-	#smallScreenButton {
-		display: none;
-	}
-
-	/* floatLeft */
-
-	#imgInLine {
-		display: inline;
-	}
-	#imgFloatRight {
-		float: right;
-		display: inline;
-		width: 40%;
-		padding-left: 1rem;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	#largeScreenButton {
-		display: none;
-	}
-}
-
-/* Subcontainer */
-.subcontainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-
 /* Footer */
 
 	#footer {
@@ -3896,7 +3827,7 @@
 		color: #909498;
 		cursor: default;
 		position: relative;
-		margin: 0 auto;
+		margin: auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4057,16 +3988,25 @@
 			color: #18bfef;
 		}
 
-		#footer ul.icons.alt li .icon:before {
-			box-shadow: inset 0 0 0 2px #e2e2e2;
+		#footer ul.icons.alt li a.icon {
+			position: relative;
+			margin: 4rem auto 8rem auto;
 		}
 
-		#footer ul.icons.alt li .fab:before {
+		#footer ul.icons.alt li .icon:before {
 			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
 		#footer ul.icons.alt li a.icon:hover:before {
 			box-shadow: inset 0 0 0 2px #18bfef;
+		}
+
+		#footer ul.icons li a.fab:hover:before {
+			color: #18bfef;
+		}
+
+		#footer ul.icons.alt li .fab:before {
+			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
 		#footer ul.icons.alt li a.fab:hover:before {
@@ -4199,7 +4139,7 @@
 						-webkit-flex-grow: 0;
 						-ms-flex-grow: 0;
 						flex-grow: 0;
-						/*width: 6rem;*/
+						width: 6rem;
 					}
 
 					#footer > section.split.contact > section > :last-child {
@@ -4236,10 +4176,6 @@
 		#footer h3,
 		#footer p {
 			font-size: 0.8rem;
-		}
-
-		#contact {
-			margin: auto;
 		}
 
 		@media screen and (max-width: 980px) {

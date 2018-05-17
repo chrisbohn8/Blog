@@ -1170,6 +1170,9 @@
 			margin-left: 8.33333%;
 		}
 
+		blockquote > p {
+			font-size: 1.4rem;
+		}
 	}
 
 	@media screen and (max-width: 480px) {

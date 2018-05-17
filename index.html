@@ -58,8 +58,7 @@ sitemap:
   										<h1><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h1>
   									</header>
    									<a href="{{ post.url | absolute_url }}" class="image right"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-  								<!--	<p>{{ post.excerpt }}</p>-->
-									<blockquote class="align-left"> Dear friend,<br> There is a lot to tell you about the last two weeks. A lot of it is good, but a lot of it is bad. Again, I don’t know why this always happens. </blockquote>
+  									<p>{{ post.excerpt }}</p>
   									<a href="{{ post.url | absolute_url }}" class="image fit wide"><img src="{{ post.image-wide | absolute_url }}" alt="" /></a>
   									<ul class="actions">
   										<li><a href="{{ post.url | absolute_url }}" class="button">Full Post</a></li>

@@ -1,7 +1,7 @@
 # Site
 title:              Bailey's Book Club
-bio:                'A place for book reviews and musings.'
-description:        "A place for book reviews and musings.'
+bio:                'A place for book review and musings.'
+description:        "A place for book reviews and musings."
 locale:             en_US
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.baileysbook.club"	 # the base hostname & protocol for your site

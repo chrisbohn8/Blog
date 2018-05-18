@@ -3764,7 +3764,9 @@
 					padding: 2.5rem;
 					width: 50%;
 				}
-
+				blockquote {
+					font-size: 1.3rem;
+				}
 			}
 
 			@media screen and (max-width: 736px) {

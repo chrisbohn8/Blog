@@ -1387,7 +1387,9 @@
 		.\-1u\28xsmall\29 {
 			margin-left: 8.33333%;
 		}
-
+		blockquote {
+			font-size: 1rem;
+		}
 	}
 
 	@media screen and (max-width: 360px) {

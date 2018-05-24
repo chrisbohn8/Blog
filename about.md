@@ -8,4 +8,12 @@ sitemap:
     changefreq: weekly
 ---
 
-<span class="image fit"><img src="{{ "/images/coming-soon.png" | absolute_url }}" alt="" /></span>
+I’m Bailey and this is my book club. It’s a pretty solitary venture but I welcome you to <a href="https://goodreads.com/{{site.goodreads}}" rel="nofollow"><span class="label">read along with me</span></a> or use my musings to help pick your next book.
+
+
+I live in Nashville, Tennessee with my husband and dog. I work in the tourism industry but when I’m not working, I enjoy exploring the extensive food and beverage scene in Nashville. I also love going to the movies and I do try to be outdoorsy at times. It’s all chronicled on  <a href="https://instagram.com/{{site.instagram}}" rel="nofollow"><span class="label">Instagram</span></a>, if you’re so inclined.
+
+
+Why I wake up in the morning: <a href="https://goodreads.com/{{site.goodreads}}" rel="nofollow"><span class="label">books</span></a>, dogs, coffee, springtime, Taylor Swift, giraffes, queso.
+
+Why I really need a nap: traffic, rain, humidity, faulty wifi, household chores, bad hair days.

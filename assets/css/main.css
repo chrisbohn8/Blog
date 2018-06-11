@@ -954,7 +954,6 @@
 		.\-1u\28medium\29 {
 			margin-left: 8.33333%;
 		}
-
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2450,7 +2449,7 @@
 
 		.image.right {
 			float: right;
-			margin: 0 0 10rem 2rem;
+			margin: 0 0 14rem 2rem;
 			top: 0.75rem;
 		}
 
@@ -3768,6 +3767,10 @@
 				blockquote {
 					font-size: 1.3rem;
 				}
+				.image.right {
+					margin: 0 0 2rem 2rem;
+		}
+
 			}
 
 			@media screen and (max-width: 736px) {

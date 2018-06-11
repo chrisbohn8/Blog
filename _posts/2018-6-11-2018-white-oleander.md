@@ -10,7 +10,8 @@ image-wide: "/images/white-oleander-wide.png"
 <span class="image right"><img src="{{ "/images/white-oleander.png" | absolute_url }}"  alt="" /></span>
 
 >How many children had this happened to? How many children were like me, floating like plankton in the wide ocean? I thought how tenuous the links were between mother and children, between friends, family, things you think are eternal. Everything could be lost, more easily than anyone could imagine.
-<span class="image fit wide"><img src="{{ "/white-oleander-wide.png" | absolute_url }}"  alt="" /></span>
+
+<span class="image fit wide"><img src="{{ "/images/white-oleander-wide.png" | absolute_url }}"  alt="" /></span>
 
 White Oleander is first and foremost a story about loss. Astrid’s grip on her mother is tenuous even from the very beginning. Astrid is a victim of her mother’s whims and eccentricities as her mother makes no sacrifice for her child to have a stable life. Astrid’s mother, Ingrid, is aloof and manipulative and she concocts all sorts of rules about love and beauty and forces them on Astrid. Astrid suffers her first loss when Ingrid is finally sent to prison for murder. Astrid carries all of her emotional baggage and rules into new, albeit temporary, families. As Astrid travels to foster family after foster family, her list of losses only grows longer.
 

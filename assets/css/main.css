@@ -2450,7 +2450,7 @@
 
 		.image.right {
 			float: right;
-			margin: 0 0 2rem 2rem;
+			margin: 0 0 10rem 2rem;
 			top: 0.75rem;
 		}
 
@@ -3463,7 +3463,6 @@
 					font-size: 1.75rem;
 					border-width: 3px !important;
 				}
-
 		}
 
 /* Nav */

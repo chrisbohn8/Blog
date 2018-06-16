@@ -1777,6 +1777,10 @@
 		padding: 0.5rem 0 0.5rem 2rem;
 	}
 
+	#tagline {
+		font-family: 'badScript';
+	}
+
 	code {
 		border: solid 2px;
 		font-family: "Courier New", monospace;

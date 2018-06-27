@@ -2,7 +2,7 @@
 layout: post
 title:  "A List of Cages"
 date:   2018-4-23
-excerpt: "A List of Cages is a heart-wrenching story told from the perspective of two boys-- Julian, who is abused by his uncle, and Adam, who used to be Julian’s foster brother. Adam and Julian reconnect when Adam becomes aide to the school therapist, who Julian artfully evades until offered the prospect of friendship with Adam who comes to fetch him for his appointments."
+excerpt: <blockquote class="small-text align-left"> For just a second I feel a burst of pure happiness. I’ve always wondered what I’d say if I saw him again. Then it occurs to me that there’s nothing to say, except maybe I’m sorry, and my happiness falls away.</blockquote>
 image: "/images/a-list-of-cages.png"
 image-wide: "/images/a-list-of-cages-wide.png"
 ---

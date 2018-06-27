@@ -2,7 +2,7 @@
 layout: post
 title:  "Simon vs. the Homo Sapiens Agenda"
 date:   2018-3-19
-excerpt: "Simon is a closeted, gay high schooler who feels alone in this plight until reading a post on his school’s gossip blog from a mystery guy that he totally relates to. Simon connects with the mystery boy called Blue. Their budding email relationship is eventually discovered by Marty, a desperate classmate. Marty blackmails Simon in order to get closer to Simon’s friend Abby."
+excerpt: <blockquote class="small-text align-left"> They put me in a box, and every time I try to nudge the lid open, they slam it back down. It’s like nothing about me is allowed to change.</blockquote>
 image: "/images/simon-vs-the-homo-sapiens-agenda.png"
 image-wide: "/images/simon-vs-the-homo-sapiens-agenda-wide.png"
 ---

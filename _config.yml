@@ -46,7 +46,7 @@ phone:              310-318-5555
 email:              info@default.com
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
